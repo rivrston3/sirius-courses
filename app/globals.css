@@ -1,13 +1,63 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+/* Sirius Bioregional Learning Center Global Styles */
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..500&family=Inter:wght@300;400;500;600;700&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
 :root {
-  --background: #fdfcf9;
-  --foreground: #1c2b23;
+  --font-fraunces: 'Fraunces', Georgia, serif;
+  --font-inter: 'Inter', system-ui, -apple-system, sans-serif;
+  --sirius-green: #2c4c3b;
+  --sirius-sand: #f0ebe0;
+  --sirius-clay: #a85c3a;
+  --sirius-bg: #faf9f5;
+  --sirius-text: #1c2b23;
 }
 
 body {
-  background-color: var(--background);
-  color: var(--foreground);
+  font-family: var(--font-inter);
+  background-color: var(--sirius-bg);
+  color: var(--sirius-text);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.5;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Custom scrollbar for modal */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #f1ede4;
+}
+::-webkit-scrollbar-thumb {
+  background: #c5beae;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #a89f8c;
 }
